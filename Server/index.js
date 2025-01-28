@@ -3,6 +3,7 @@ const express = require('express');             //1
 const RunServer = require('./Database/Connection');
 const cors = require('cors');
 const userRouter = require('./Routes/userRoutes.js');
+const contactRouter = require('./Routes/contactRoutes.js');
 
 
 
@@ -19,6 +20,7 @@ app.use(cors())
 //such as modifying requests and responses or ending the request-response cycle.
 
 app.use('/api/user', userRouter)
+app.use('/api/contact', contactRouter)
 
 app.listen(port, ()=> {                        //6
     console.log(`server is running on ${port}`)

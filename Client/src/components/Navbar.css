@@ -1,0 +1,22 @@
+ul{
+    display: flex;
+    justify-content:start;
+    gap: 20px;
+    list-style-type: none;
+    background-color: white;
+    height: 50px;
+    color: grey;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 100px;
+    align-items: center;
+}
+
+
+body{
+    background-color: dodgerblue;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}

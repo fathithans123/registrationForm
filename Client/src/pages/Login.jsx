@@ -29,19 +29,45 @@ const Login = () => {
   }
   }
   return (
-    <div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+       <div className="bg-white p-8 rounded shadow-lg w-full max-w-md">
+       <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+        Login
+        </h2>
         <form onSubmit={LoginUser} className="space-y-4">
-           <label for="email">Email</label>
-           <input type="email" onChange={(e) => setEmail(e.target.value)} required></input>
+          <div>
+           <label className="block text-sm font-medium text-gray-700 mb-1"> 
+            Email: 
+            </label>
+           <input 
+           type="email" 
+           placeholder="Your Email" 
+           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+           onChange={(e) => setEmail(e.target.value)} 
+           required
+           />
+           </div>
 
-           <label for="password">Password</label>
-           <input type="password" onChange={(e) => setPassword(e.target.value)} required></input>
+          <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1"> 
+            Password: 
+            </label>
+           <input 
+           type="password" 
+           placeholder="Your Password" 
+           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+           onChange={(e) => setPassword(e.target.value)} 
+           required
+           />
+           </div>
 
-           <button>Login</button>
-           <p> Have an account? {" "}
-            <Link to="/">Register</Link>
-            </p>
+           <button 
+           type="submit"
+           className="w-full bg-green-500 text-white py-2 px-4 rounded-md green:bg-blue-600 transition">
+           Login
+           </button>
         </form>
+    </div>
     </div>
   )
 }
